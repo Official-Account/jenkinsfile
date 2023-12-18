@@ -1,0 +1,26 @@
+// Declarative //
+pipeline{ 
+	agent any
+	
+	
+		stges{
+		
+			stage('Build') {
+				steps {
+					echo 'Building..'
+				}
+			}
+			stge('compile'){
+				steps{
+					sh "javac Hello.java"
+				}
+			}
+			stge('run'){
+				steps{
+					sh "java Hello"
+				}
+			}
+		}
+}
+
+
