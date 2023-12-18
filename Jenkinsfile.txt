@@ -2,24 +2,22 @@
 pipeline{ 
 	agent any
 	
-		stges{
+		stages{
 		
 			stage('Build') {
 				steps {
 					echo 'Building..'
 				}
 			}
-			stge('compile'){
+			stage('compile'){
 				steps{
 					sh "javac Hello.java"
 				}
 			}
-			stge('run'){
+			stage('run'){
 				steps{
 					sh "java Hello"
 				}
 			}
 		}
 }
-
-
